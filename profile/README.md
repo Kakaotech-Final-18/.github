@@ -10,16 +10,8 @@
 
 </div>
 
-### 기술스택
-<div align="center">
-  <h1>📚 STACKS</h1>
-</div>
-
-<div align="center">
-  <h2>🛠 Tech Stacks</h2>
-</div>
-
-<div align="center">
+## 기술스택
+<div align="start">
 
 ### 📞 텍스트 통화
 <img src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=WebRTC&logoColor=white">
@@ -36,15 +28,11 @@
 
 <br>
 
-### 🧠 라이브러리 및 프레임워크
+### 🤖 AI
 <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white">
 <img src="https://img.shields.io/badge/NVIDIA CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
 <img src="https://img.shields.io/badge/LangChain-333333?style=for-the-badge&logo=langchain&logoColor=white">
 <img src="https://img.shields.io/badge/Google Cloud Speech to Text-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
-
-<br>
-
-### 🚀 배포
 <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
 
 <br>

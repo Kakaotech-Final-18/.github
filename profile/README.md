@@ -9,3 +9,64 @@
 | Full-Stack                                              | Full-Stack                                       | AI                                       | AI                                                                                                                                           | Cloud                                                                                                                                              | Cloud                                       |
 
 </div>
+
+### 기술스택
+<div align="center">
+  <h1>📚 STACKS</h1>
+</div>
+
+<div align="center">
+  <h2>🛠 Tech Stacks</h2>
+</div>
+
+<div align="center">
+
+### 📞 텍스트 통화
+<img src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=WebRTC&logoColor=white">
+<img src="https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white">
+<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=express&logoColor=white">
+
+<br>
+
+### 🎤 STT / TTS
+<img src="https://img.shields.io/badge/Amazon Transcribe-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white">
+<img src="https://img.shields.io/badge/Amazon Polly-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white">
+
+<br>
+
+### 🧠 라이브러리 및 프레임워크
+<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white">
+<img src="https://img.shields.io/badge/NVIDIA CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
+<img src="https://img.shields.io/badge/LangChain-333333?style=for-the-badge&logo=langchain&logoColor=white">
+<img src="https://img.shields.io/badge/Google Cloud Speech to Text-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
+
+<br>
+
+### 🚀 배포
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
+
+<br>
+
+### 🔄 CI/CD
+<img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
+<img src="https://img.shields.io/badge/Argo CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white">
+
+<br>
+
+### 🔍 모니터링
+<img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white">
+<img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white">
+
+<br>
+
+### ⚙️ 인프라
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white">
+<img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white">
+<img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white">
+<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+
+</div>

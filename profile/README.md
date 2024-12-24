@@ -10,8 +10,17 @@
 
 </div>
 
-## 기술스택
-<div align="start">
+## 목차
+* [⚒️ 기술스택](#⚒️-기술스택)
+
+
+
+
+
+## ⚒️ 기술스택
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
 
 ### 📞 텍스트 통화
 <img src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=WebRTC&logoColor=white">
@@ -58,3 +67,9 @@
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 
 </div>
+
+
+</div>
+</details>
+<div align="start">
+

@@ -16,7 +16,14 @@
 ## 목차
 * [⚒️ 기술스택](#stack)
 * [🤔 아이디어 소개](#idea)
-* [📞 기능 소개](#function)
+* [📞 주요 기능](#function)
+* [💸 아키텍처](#architecture)
+* [🗂️ ERD](#erd)
+* [🔎 기술 사용 근거](#detail)
+* [📈 성능 개선 & 리팩토링](#improve)
+* [🖥️ 테스트 & 모니터링](#test)
+* [🍻 결과](#result)
+* [📺 시연 영상](#video)
 
 
 <!-- 기술 스택 -->
@@ -80,21 +87,103 @@
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-안녕
+아이디어 소개 내용입니다.
 
 </div>
 </details>
 
-
 <!-- 기능 소개 -->
 <a id="function"></a>
-## 📞 기능 소개
+## 📞 주요 기능
 <details>
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-안녕
+주요 기능 내용입니다.
 
 </div>
 </details>
 
+<!-- 아키텍처 -->
+<a id="architecture"></a>
+## 💸 아키텍처
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+아키텍처 내용입니다.
+
+</div>
+</details>
+
+<!-- ERD -->
+<a id="erd"></a>
+## 🗂️ ERD
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+ERD 내용입니다.
+
+</div>
+</details>
+
+<!-- 기술 사용 근거 -->
+<a id="detail"></a>
+## 🔎 기술 사용 근거
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+기술 사용 근거 내용입니다.
+
+</div>
+</details>
+
+<!-- 성능 개선 & 리팩토링 -->
+<a id="improve"></a>
+## 📈 성능 개선 & 리팩토링
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+성능 개선 & 리팩토링 내용입니다.
+
+</div>
+</details>
+
+<!-- 테스트 & 모니터링 -->
+<a id="test"></a>
+## 🖥️ 테스트 & 모니터링
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+테스트 & 모니터링 내용입니다.
+
+</div>
+</details>
+
+<!-- 결과 -->
+<a id="result"></a>
+## 🍻 결과
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+결과 내용입니다.
+
+</div>
+</details>
+
+<!-- 시연 영상 -->
+<a id="video"></a>
+## 📺 시연 영상
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+시연 영상 내용입니다.
+
+</div>
+</details>

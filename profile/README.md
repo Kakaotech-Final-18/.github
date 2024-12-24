@@ -1,4 +1,7 @@
+<!-- 프로필 사진 -->
 ![image](https://github.com/user-attachments/assets/1c580072-7caf-484f-a55c-da4899cc22c2)
+
+<!-- 팀원 및 역할 -->
 ## 팀원 및 역할
 
 <div align="center">
@@ -7,15 +10,16 @@
 |------------------------------------------------------|--------------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | [Roki.Kim(김경록)](https://github.com/KimGyeongLock)                                            | [Austin.Choi(최윤서)](https://github.com/Austin-Choi)                                           | [Cellina.Jeong(정은채)](https://github.com/Goldchae)                                           | [Jay.Hwang(황지원)](https://github.com/JiwonHwang84)                                                                                                                                               | [Sofia.Park(박수현)](https://github.com/suugit)                                                                                                                                               | [Jimmy.Kim(김승엽)](https://github.com/yeopyeop-82)                                           |
 | Full-Stack                                              | Full-Stack                                       | AI                                       | AI                                                                                                                                           | Cloud                                                                                                                                              | Cloud                                       |
-
 </div>
 
+<!-- 목차 -->
 ## 목차
 * [⚒️ 기술스택](#stack)
+* [🤔 아이디어 소개](#idea)
+* [📞 기능 소개](#function)
 
 
-
-
+<!-- 기술 스택 -->
 <a id="stack"></a>
 ## ⚒️ 기술스택
 <details>
@@ -67,6 +71,30 @@
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 
 </div>
+</details>
 
+<!-- 아이디어 소개 -->
+<a id="idea"></a>
+## 🤔 아이디어 소개
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+안녕
 
 </div>
+</details>
+
+
+<!-- 기능 소개 -->
+<a id="function"></a>
+## 📞 기능 소개
+<details>
+<summary> 본문 확인 (👈 Click) </summary>
+<div markdown="1">
+
+안녕
+
+</div>
+</details>
+

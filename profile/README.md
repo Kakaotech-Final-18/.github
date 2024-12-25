@@ -137,11 +137,9 @@
   - `user_id`: 사용자 고유 식별자 (Primary Key)
   - `nickname`: 사용자의 닉네임
   - `email`: 사용자 이메일
-  - `provider`: 로그인 방식을 나타내는 열 (e.g., KAKAO, GOOGLE)
+  - `provider`: 소셜 로그인 방식 (e.g., KAKAO, GOOGLE)
   - `profile_image`: 사용자 프로필 이미지
   - `created_at`, `updated_at`: 데이터 생성 및 수정 시간
-- **관계:** 
-  - RoomUser_Detail 테이블과 1:N 관계. 사용자는 여러 개의 RoomUser_Detail에 참여할 수 있습니다.
 
 ---
 
@@ -155,23 +153,19 @@
   - `room_name`: 대화방 이름
   - `sender_id`: 발신자 ID
   - `receiver_id`: 수신자 ID
-- **관계:** 
-  - RoomUser_Detail 테이블과 1:N 관계. 각 대화는 여러 사용자의 RoomUser_Detail에 연결될 수 있습니다.
 
 ---
 
 ### **3. Todos 테이블**
-- **역할:** 특정 사용자와 관련된 투두(To-Do) 항목을 저장합니다.
+- **역할:** 대화 방에서 생성된 투두(To-Do) 항목을 저장합니다.
 - **주요 필드:**
   - `todo_id`: 투두 고유 식별자 (Primary Key)
   - `title`: 투두 제목
-- **관계:**
-  - RoomUser_Detail 테이블과 1:N 관계. 각 투두는 여러 RoomUser_Detail 항목과 연결될 수 있습니다.
 
 ---
 
 ### **4. RoomUser_Detail 테이블**
-- **역할:** 마이페이지 관련 데이터를 관리하며, 사용자, 대화, 투두 간의 관계를 연결합니다.
+- **역할:** 마이페이지에서 유저별 투두(To-Do)를 관리하며, 사용자, 대화, 투두 간의 관계를 연결합니다.
 - **주요 필드:**
   - `user_id`: 사용자 ID (Foreign Key)
   - `todo_id`: 투두 ID (Foreign Key)
@@ -188,6 +182,18 @@
 - **Todos ↔ RoomUser_Detail:** 투두와 마이페이지 상세 정보는 1:N 관계입니다.
 
 ---
+
+### 유의할 점
+**RoomUser_Detail 테이블의 데이터 증가 문제**<br>
+RoomUser_Detail 테이블은 대화가 시작될 때 유저 수(2명)와 투두의 갯수만큼 데이터가 생성됩니다.<br>
+예를 들어, 대화 하나에 두 명의 유저와 10개의 투두 항목이 있다면, 이 대화로 인해 RoomUser_Detail 테이블에는 2 x 10 = 20개의 데이터가 추가됩니다.<br>
+여러 대화와 투두가 반복적으로 추가되면 데이터가 기하급수적으로 증가하여 성능 및 저장 공간에 문제가 발생할 수 있습니다.<br>
+
+**최적화 전략 구상**
+* **인덱싱 추가** → 빠른 쿼리 개선.
+* **캐싱 도입** → 자주 조회되는 데이터를 캐시에 저장.
+* **데이터 수명 관리** → 오래된 데이터를 주기적으로 삭제.
+* **비즈니스 로직 개선** → 중복 데이터 최소화.
 
 </div>
 </details>

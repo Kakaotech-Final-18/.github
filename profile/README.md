@@ -241,7 +241,7 @@ RoomUser_Detail 테이블은 대화가 시작될 때 유저 수(2명)와 투두�
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-![Uploading Slide 16_9 - 39.png…]()
+![Slide 16_9 - 39](https://github.com/user-attachments/assets/c85e9558-0332-441e-87b0-65b115d12b4c)
 
 </div>
 </details>

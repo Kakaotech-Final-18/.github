@@ -115,6 +115,22 @@
 
 ![Slide 16_9 - 46](https://github.com/user-attachments/assets/219ee32d-c574-4c3f-adcb-3c12fae6bb8c)
 > 아키텍처 설명
+## Infrastructure & Application Management
+
+### 1. Parrotalk-CD Repository
+- **Terraform**: AWS 인프라 구성 (VPC, EKS, RDS)
+- **Ansible**: Kubernetes 클러스터, ArgoCD 설치
+- **Kubespray**: K8s 클러스터 자동 설치
+
+### 2. Parrotalk-Manifests Repository
+- **매니페스트 관리**: K8s 리소스 정의 매니페스트 관리
+- **자동 배포**: ArgoCD를 통한 자동 배포
+- **설정 관리**: 마이크로서비스 및 인프라 설정 포함
+
+### 배포 프로세스
+1. CD Repository로 인프라 구성 및 ArgoCD 설치
+2. ArgoCD가 Manifests Repository와 연동되어 전체 시스템 자동 구성
+3. 이후 모든 변경사항은 Git을 통해 자동 배포
 
 </div>
 </details>

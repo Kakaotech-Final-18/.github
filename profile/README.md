@@ -269,7 +269,7 @@ RoomUser_Detail 테이블은 대화가 시작될 때 유저 수(2명)와 투두�
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-시연 영상 내용입니다.
+[앵무말 시연영상](https://youtu.be/gmF1yILZO4E)
 
 </div>
 </details>

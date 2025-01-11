@@ -6,7 +6,7 @@
 
 <div align="center">
 
-| <img src="https://github.com/user-attachments/assets/dc4eb80e-edf4-41a2-abda-b1175dcf6206" width="120"/> | <img src="image2.jpg" width="120"/> | <img src="image3.jpg"  width="120"/> | <img src="https://github.com/user-attachments/assets/92ead9d9-1c00-4de8-8e31-b22ce2234935" width="120"/> | <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/laptop_1f4bb.png" width="120"/> | <img src="image6.jpg" width="120"/> |
+| <img src="https://github.com/user-attachments/assets/dc4eb80e-edf4-41a2-abda-b1175dcf6206" width="120"/> | <img src="https://avatars.githubusercontent.com/u/33799946?v=4" width="120"/> | <img src="image3.jpg"  width="120"/> | <img src="https://github.com/user-attachments/assets/92ead9d9-1c00-4de8-8e31-b22ce2234935" width="120"/> | <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/laptop_1f4bb.png" width="120"/> | <img src="image6.jpg" width="120"/> |
 |------------------------------------------------------|--------------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | [Roki.Kim(김경록)](https://github.com/KimGyeongLock)                                            | [Austin.Choi(최윤서)](https://github.com/Austin-Choi)                                           | [Cellina.Jeong(정은채)](https://github.com/Goldchae)                                           | [Jay.Hwang(황지원)](https://github.com/JiwonHwang84)                                                                                                                                               | [Sofia.Park(박수현)](https://github.com/suugit)                                                                                                                                               | [Jimmy.Kim(김승엽)](https://github.com/yeopyeop-82)                                           |
 | Full-Stack                                              | Full-Stack                                       | AI                                       | AI                                                                                                                                           | Cloud                                                                                                                                              | Cloud                                       |
@@ -101,7 +101,21 @@
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-주요 기능 내용입니다.
+### 1. 1대1 통화
+- **Voice to Voice** : Socket.io, WebRTC, 자체 구축 STUN과 TURN 서버를 활용해 사용자간 1대1 음성통화가 가능합니다.
+- **Voice to Chat** : Voice to Voice에서 확장하여 Chat 유저는 WebRTC의 DataChannel를 사용하여 연결합니다.<br>
+  또한, Chat 사용자는 TTS를 사용해 Voice 사용자에게 자신이 입력한 Chat 메시지를 음성으로 출력하여 전달합니다.<br>
+  Voice 사용자의 말은 Amazon Transcribe를 활용한 스트리밍 STT로 실시간으로 Chat 사용자에게 Chat 메시지로 출력됩니다.
+- **Chat to Chat** : WebRTC의 DataChannel를 활용하여 일반 1대1 채팅으로 연결합니다.
+
+### 2. 추천
+- Voice to Chat 시나리오에서 Chat 사용자는 대화 맥락에 맞는 예상되는 추천 문구를 총 3가지를 선택 가능합니다.
+- 추천은 채팅 입력창 위 3개의 버튼으로 출력되며, 버튼을 클릭해 바로 입력할 수 있습니다.
+- 추천은 추천이 필요한 상황인지 AI가 판단한 상황에서만 출력됩니다.
+
+### 3. TODO
+- 통화 종료 후, 통화 내용을 요약한 리스트가 출력되고 그 중 원하는 항목만 골라 저장하고<br>
+  마이페이지의 통화 목록에서 상대방이 누구였는지, 통화 일시는 언제였는지와 함께 확인할 수 있습니다.
 
 </div>
 </details>
@@ -221,7 +235,35 @@ RoomUser_Detail 테이블은 대화가 시작될 때 유저 수(2명)와 투두�
 <summary> 본문 확인 (👈 Click) </summary>
 <div markdown="1">
 
-기술 사용 근거 내용입니다.
+### 1. 사용자간 웹 상 통화 구현 방법
+- **HLS** : 미디어 스트리밍에 있어서 점유율이 가장 높습니다.<br>
+  But, latency가 3초로 실시간 전송이 필요한 우리 서비스에는 미흡하다고 판단했습니다.
+- **Twillio** : 웹상 통화 API로 간단한 사용 방법과 실시간 전송, 일반 스마트폰과 웹 사용자와의 통화를 지원했습니다.<br>
+  But, 사용자마다 임시 번호를 구입해야하거나 미리 대량의 번호를 사 두고 돌아가며 지급해야하는 운영의 복잡성이 올라갑니다.<br>
+- **WebRTC** : latency가 매우 낮고 실시간 전송을 보장하며 데이터 전송에서 서버를 거치지 않아 네트워크 사용량이 적습니다.<br>
+  But, 학습곡선이 높을 수 있고 NAT 환경에서의 연결을 위해 TURN 서버 구축이 필수이며 서버 비용이 높을 수 있습니다.<br>
+  
+-> 서비스의 기술 요구사항에 따라 **WebRTC** 가 가장 적합하여 채택하였습니다.
+
+---
+
+### 2. WebRTC 토폴로지 선택
+- **MCU** : 중앙에 미디어 서버를 두고 통신하는 방식으로 미디어 서버 구현 난이도와 클라우드 비용 문제가 상충하여 채택하지 않았습니다.
+- **Mesh** : 클라이언트 간 미디어를 직접 전송하는 방식으로 1대1일때 품질이 우수하고 대기시간이 짧아 채택했습니다.
+- **SFU** : 대규모 다자간 통신으로 확장성이 있고, SFU 역시 미디어 서버를 사용하지만 <br>
+  MCU와 달리 서버에서 인코딩/디코딩을 하지 않아 추후 지속적인 서비스를 위해 고려하고 있습니다.
+
+-> 1대1 통화를 우선으로 하니 **Mesh**로 구성하엿습니다.
+
+---
+
+### 3. STT 기술 선택
+- **Google STT** : 실시간 스트리밍을 제공하고 다양한 언어를 지원하지만 화자 분리 기능이 존재하지 않았습니다.
+- **OpenAI Whisper** : 무료지만 실시간 스트리밍을 제공하지 않아 Batch 처리를 해야 하므로 지연도가 높아집니다.
+- **Amazon Transcribe** : 실시간 스트리밍을 제공하고 추후 다자간 통신을 위한 화자 분리가 가능합니다.<br>
+  공식 문서가 잘 되어 있었고, 이미 사용하고 있는 Amazon의 다른 서비스와 함께 관리 및 운영이 수월했습니다.
+
+-> Speech-to-Text 기술은 **Amazon Transcribe**를 활용했습니다.
 
 </div>
 </details>

@@ -165,7 +165,7 @@
 <div markdown="1">
 
 ![Slide 16_9 - 46](https://github.com/user-attachments/assets/219ee32d-c574-4c3f-adcb-3c12fae6bb8c)
-> 아키텍처 설명
+
 ## Infrastructure & Application Management
 
 ### 1. Parrotalk-CD Repository
